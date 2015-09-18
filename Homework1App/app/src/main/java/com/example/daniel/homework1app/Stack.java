@@ -9,6 +9,7 @@ package com.example.daniel.homework1app;
  * isEmpty returns true if stack is empty and false if not
  * max size of stack is 3
  * stackSize differs depending on pushed and popped elements
+ * maxSize doesn't change
  */
 
 
