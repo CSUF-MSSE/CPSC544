@@ -1,0 +1,56 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <EditText android:id="@+id/edit_message"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="Enter 1 integer 0-9  " />
+
+    <TextView
+        android:id="@+id/text_message"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:text=" push"
+        android:onClick="pushInteger"
+
+        />
+    <Button
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:text=" pop"
+        android:onClick="popInteger"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:layout_marginLeft="300dp"
+        android:onClick="exitApp"
+
+        />
+
+
+
+
+</LinearLayout>
+
+
