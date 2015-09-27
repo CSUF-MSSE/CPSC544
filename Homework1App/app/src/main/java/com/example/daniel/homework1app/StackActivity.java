@@ -62,10 +62,12 @@ public class StackActivity extends AppCompatActivity {
         //Intent intent = new Intent(this,DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String firstvalue = editText.getText().toString();
-        int value = Integer.parseInt(firstvalue);
         TextView textView = (TextView) findViewById(R.id.text_message);
         AlertDialog.Builder build = new AlertDialog.Builder(this);
 
+        int value = -1;
+        if (isInteger(firstvalue))
+            value = Integer.parseInt(firstvalue);
 
         //makes sure number is between 0-9
         if(value <= 9 && value >= 0) {
@@ -186,7 +188,16 @@ public class StackActivity extends AppCompatActivity {
         alerter.show();
     }
 
-
+    // isInteger(): helper function to sanitize user input.
+    public static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+        }
+        catch(NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
 
 
 }
