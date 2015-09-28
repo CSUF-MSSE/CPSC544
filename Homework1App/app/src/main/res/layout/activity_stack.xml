@@ -1,16 +1,15 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <EditText android:id="@+id/edit_message"
-              android:layout_weight="1"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:hint="Enter 1 integer 0-9  " />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter 1 integer within 0-9  " />
 
     <TextView
         android:id="@+id/text_message"
@@ -18,36 +17,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:text=" push"
-        android:onClick="pushInteger"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50pt">
 
-        />
-    <Button
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:text=" pop"
-        android:onClick="popInteger"
-        />
+        <Button
+            android:layout_width="50pt"
+            android:layout_height="match_parent"
+            android:text="push"
+            android:onClick="pushInteger"
+            android:layout_gravity="left"
+            />
+        <Button
+            android:layout_width="50pt"
+            android:layout_height="match_parent"
+            android:text="pop"
+            android:onClick="popInteger"
+            android:layout_gravity="left"
+            />
+        <Space
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+        <Button
+            android:layout_width="50pt"
+            android:layout_gravity="right"
+            android:layout_height="match_parent"
+            android:text="EXIT"
+            android:onClick="exitApp"
+            />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EXIT"
-        android:layout_marginLeft="300dp"
-        android:onClick="exitApp"
-
-        />
-
+    </LinearLayout>
 
 
 
